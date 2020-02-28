@@ -8,8 +8,21 @@ class LandingDetailFive extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) {
+        double widthContainer =
+            sizingInformation.deviceScreenType == DeviceScreenType.Mobile
+                ? 250
+                : 350;
+        double titleSize =
+            sizingInformation.deviceScreenType == DeviceScreenType.Mobile
+                ? 15
+                : 20;
+        double priceSize =
+            sizingInformation.deviceScreenType == DeviceScreenType.Mobile
+                ? 15
+                : 20;
+
         return Container(
-          width: 350,
+          width: widthContainer,
           margin: EdgeInsets.only(right: 25.0),
           child: Card(
             elevation: 4,
@@ -37,7 +50,7 @@ class LandingDetailFive extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 20,
+                    fontSize: titleSize,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -46,7 +59,7 @@ class LandingDetailFive extends StatelessWidget {
                   "Rp. 150.000,00",
                   style: TextStyle(
                     color: Colors.pink,
-                    fontSize: 20,
+                    fontSize: priceSize,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

@@ -1,5 +1,5 @@
+import 'package:adminbyneet/view/footer/footer_view.dart';
 import 'package:adminbyneet/widgets/call_to_action/call_to_action.dart';
-import 'package:adminbyneet/widgets/course_details/footer_view.dart';
 import 'package:adminbyneet/widgets/landing_details/landing_categories_items.dart';
 import 'package:adminbyneet/widgets/landing_details/landing_categories_title.dart';
 import 'package:adminbyneet/widgets/landing_details/landing_details_five.dart';

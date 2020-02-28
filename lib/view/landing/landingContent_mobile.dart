@@ -1,7 +1,9 @@
+import 'package:adminbyneet/view/footer/footer_view.dart';
 import 'package:adminbyneet/widgets/call_to_action/call_to_action.dart';
 import 'package:adminbyneet/widgets/course_details/course_detail.dart';
 import 'package:adminbyneet/widgets/landing_details/landing_categories_items.dart';
 import 'package:adminbyneet/widgets/landing_details/landing_categories_title.dart';
+import 'package:adminbyneet/widgets/landing_details/landing_details_five.dart';
 import 'package:adminbyneet/widgets/landing_details/landing_details_four.dart';
 import 'package:adminbyneet/widgets/landing_details/landing_details_three.dart';
 import 'package:adminbyneet/widgets/landing_details/landing_details_two.dart';
@@ -103,42 +105,24 @@ class LandingContentMobile extends StatelessWidget {
           Center(child: CallToAction(title: "Browse Categories")),
           SizedBox(height: 60),
           LandingCategoriesTitle(),
-          // CallToAction(title: "Explore Course"),
-
           SizedBox(height: 60),
-          SizedBox(height: 200)
-        ],
-      ),
-    );
-  }
-
-  Widget cards() {
-    return Card(
-      elevation: 3,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14.0)),
-      margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
-      child: Column(
-        children: <Widget>[
           Container(
-            width: 150,
-            height: 100,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(14),
-              color: Colors.red, // image: DecorationImage(
-              //   image: AssetImage("assets/images/404.jpg"),
-              //   fit: BoxFit.cover,
-              // ),
+            width: double.infinity,
+            height: 300,
+            // color: Colors.amber,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              shrinkWrap: true,
+              children: <Widget>[
+                LandingDetailFive(),
+                LandingDetailFive(),
+                LandingDetailFive(),
+                LandingDetailFive(),
+              ],
             ),
           ),
-          SizedBox(height: 10),
-          Text(
-            "Design",
-            style: TextStyle(
-              fontSize: 25,
-              // fontWeight: FontWeight.bold,
-            ),
-          ),
-          SizedBox(height: 10),
+          SizedBox(height: 60),
+          FooterView(),
         ],
       ),
     );
