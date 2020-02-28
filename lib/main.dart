@@ -1,7 +1,12 @@
-import 'package:adminbyneet/view/landing/landing_view.dart';
+import 'package:adminbyneet/layout_template/layout_template.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+import 'locator.dart';
+
+void main() {
+  setupLocator();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -9,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Admin',
       theme: ThemeData(fontFamily: "Nunito"),
-      home: LandingView(),
+      home: LayoutTemplate(),
     );
   }
 }
