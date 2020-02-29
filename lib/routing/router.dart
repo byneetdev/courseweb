@@ -5,7 +5,7 @@ import 'package:adminbyneet/view/help/help_view.dart';
 import 'package:adminbyneet/view/home/home_view.dart';
 import 'package:adminbyneet/view/landing/landing_view.dart';
 import 'package:adminbyneet/view/login/login_view.dart';
-import 'package:adminbyneet/view/register/register_page.dart';
+import 'package:adminbyneet/view/register/register_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 

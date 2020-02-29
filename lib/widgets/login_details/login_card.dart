@@ -1,5 +1,10 @@
+import 'package:adminbyneet/routing/route_names.dart';
+import 'package:adminbyneet/services/navigator_services.dart';
 import 'package:adminbyneet/widgets/call_to_action/call_to_action.dart';
+import 'package:adminbyneet/widgets/login_details/login_textfield.dart';
 import 'package:flutter/material.dart';
+
+import '../../locator.dart';
 
 class LoginCard extends StatelessWidget {
   @override
@@ -17,28 +22,29 @@ class LoginCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      "Log In",
+                      "Masuk",
                       style:
                           TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(height: 60),
-                    Text("Email adress"),
-                    TextFormField(
-                      decoration: InputDecoration(
-                          hintText: "you@example.com",
-                          border: UnderlineInputBorder()),
+                    LoginTextField(
+                      title: "Email adress",
+                      hintText: "you@example.com",
+                      obsecureText: false,
                     ),
-                    SizedBox(height: 20),
-                    Text("Password"),
-                    TextFormField(
-                      decoration: InputDecoration(
-                          hintText: "Enter your password",
-                          border: UnderlineInputBorder()),
+                    LoginTextField(
+                      title: "Password",
+                      hintText: "Enter your password",
+                      obsecureText: true,
                     ),
                     SizedBox(height: 30),
                     Align(
                       alignment: Alignment.centerRight,
-                      child: Text("Lupa password?"),
+                      child: Text(
+                        "Lupa password?",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700, color: Colors.pink),
+                      ),
                     ),
                     SizedBox(height: 20),
                     CallToAction(title: "Log In"),
@@ -47,7 +53,16 @@ class LoginCard extends StatelessWidget {
                       children: <Widget>[
                         Text("Belum punya akun ?"),
                         SizedBox(width: 10),
-                        Text("Daftar"),
+                        GestureDetector(
+                          onTap: () => locator<NavigationService>()
+                              .navigateTo(RegisterRoute),
+                          child: Text(
+                            "Daftar",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w700,
+                                color: Colors.pink),
+                          ),
+                        ),
                       ],
                     )
                   ],

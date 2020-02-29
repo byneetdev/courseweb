@@ -1,5 +1,4 @@
-import 'package:adminbyneet/widgets/call_to_action/call_to_action.dart';
-import 'package:adminbyneet/widgets/login_details/logincard.dart';
+import 'package:adminbyneet/widgets/login_details/login_card.dart';
 import 'package:flutter/material.dart';
 
 class LoginDesktop extends StatelessWidget {
