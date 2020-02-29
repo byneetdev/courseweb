@@ -1,5 +1,5 @@
 import 'package:adminbyneet/widgets/call_to_action/call_to_action.dart';
-import 'package:adminbyneet/widgets/course_details/course_detail.dart';
+import 'package:adminbyneet/widgets/course_details/course_details_one.dart';
 import 'package:flutter/material.dart';
 
 class HomeContentMobile extends StatelessWidget {
@@ -12,7 +12,7 @@ class HomeContentMobile extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          CourseDetails(),
+          CourseDetailsOne(),
           SizedBox(height: 100),
           CallToAction(title: "Join Course"),
         ],

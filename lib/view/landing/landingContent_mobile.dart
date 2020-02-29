@@ -1,6 +1,6 @@
 import 'package:adminbyneet/view/footer/footer_view.dart';
 import 'package:adminbyneet/widgets/call_to_action/call_to_action.dart';
-import 'package:adminbyneet/widgets/course_details/course_detail.dart';
+import 'package:adminbyneet/widgets/course_details/course_details_one.dart';
 import 'package:adminbyneet/widgets/landing_details/landing_categories_items.dart';
 import 'package:adminbyneet/widgets/landing_details/landing_categories_title.dart';
 import 'package:adminbyneet/widgets/landing_details/landing_details_five.dart';
@@ -20,7 +20,7 @@ class LandingContentMobile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           SizedBox(height: 30),
-          CourseDetails(),
+          CourseDetailsOne(),
           SizedBox(height: 100),
           CallToAction(title: "Get Started"),
           SizedBox(height: 60),

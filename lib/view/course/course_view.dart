@@ -1,22 +1,16 @@
+import 'package:adminbyneet/view/course/course_desktop.dart';
+import 'package:adminbyneet/view/course/course_mobile.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class CourseView extends StatelessWidget {
   const CourseView({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blue,
-      child: Center(
-        child: Text(
-          "Course",
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 35,
-          ),
-        ),
-      ),
+    return ScreenTypeLayout(
+      mobile: CourseMobile(),
+      desktop: CourseDesktop(),
     );
   }
 }

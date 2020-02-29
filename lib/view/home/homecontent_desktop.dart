@@ -5,7 +5,6 @@ import 'package:adminbyneet/widgets/home_details/home_details_five.dart';
 import 'package:adminbyneet/widgets/home_details/home_details_one.dart';
 import 'package:adminbyneet/widgets/home_details/home_details_three.dart';
 import 'package:adminbyneet/widgets/home_details/home_details_two.dart';
-import 'package:adminbyneet/widgets/home_details/home_item_card.dart';
 import 'package:adminbyneet/widgets/home_details/home_title_details.dart';
 import 'package:flutter/material.dart';
 
