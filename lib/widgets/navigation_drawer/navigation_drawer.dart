@@ -1,7 +1,11 @@
+import 'package:adminbyneet/routing/route_names.dart';
+import 'package:adminbyneet/services/navigator_services.dart';
 import 'package:adminbyneet/widgets/navigation_bar/navbar_button.dart';
 import 'package:adminbyneet/widgets/navigation_drawer/drawer_item.dart';
 import 'package:adminbyneet/widgets/navigation_drawer/navigationdrawer_header.dart';
 import 'package:flutter/material.dart';
+
+import '../../locator.dart';
 
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer({Key key}) : super(key: key);
@@ -20,13 +24,32 @@ class NavigationDrawer extends StatelessWidget {
           child: Column(
             children: <Widget>[
               NavigationDrawerHeader(),
-              DrawerItem(title: "Home", icon: Icons.library_books),
-              DrawerItem(title: "Tentang Kami", icon: Icons.info),
-              DrawerItem(title: "Kursus", icon: Icons.menu),
-              DrawerItem(title: "Bantuan", icon: Icons.help),
-              DrawerItem(title: "Login", icon: Icons.person),
+              DrawerItem(
+                  title: "Home",
+                  icon: Icons.library_books,
+                  navigationPath: HomeRoute),
+              DrawerItem(
+                  title: "Tentang Kami",
+                  icon: Icons.info,
+                  navigationPath: AboutRoute),
+              DrawerItem(
+                  title: "Kursus",
+                  icon: Icons.menu,
+                  navigationPath: CourseRoute),
+              DrawerItem(
+                  title: "Bantuan",
+                  icon: Icons.help,
+                  navigationPath: HelpRoute),
+              DrawerItem(
+                  title: "Login",
+                  icon: Icons.person,
+                  navigationPath: LoginRoute),
               SizedBox(height: 25.0),
-              NavbarButton(title: "Daftar", onPressed: () {}),
+              NavbarButton(
+                title: "Daftar",
+                onPressed: () =>
+                    locator<NavigationService>().navigateTo(RegisterRoute),
+              ),
             ],
           ),
         ));
