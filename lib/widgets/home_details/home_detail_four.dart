@@ -34,6 +34,7 @@ class HomeDetailFour extends StatelessWidget {
           child: Center(
             child: Material(
               borderRadius: BorderRadius.circular(16.0),
+              elevation: 6.0,
               child: Image.asset(
                 "assets/images/girl3.jpg",
                 fit: BoxFit.cover,

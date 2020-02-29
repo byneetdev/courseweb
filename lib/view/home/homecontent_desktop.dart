@@ -1,4 +1,6 @@
+import 'package:adminbyneet/view/footer/footer_desktop.dart';
 import 'package:adminbyneet/widgets/home_details/home_detail_four.dart';
+import 'package:adminbyneet/widgets/home_details/home_detail_six.dart';
 import 'package:adminbyneet/widgets/home_details/home_details_five.dart';
 import 'package:adminbyneet/widgets/home_details/home_details_one.dart';
 import 'package:adminbyneet/widgets/home_details/home_details_three.dart';
@@ -37,6 +39,10 @@ class HomeContentDesktop extends StatelessWidget {
             HomeDetailFour(),
             SizedBox(height: 45),
             HomeDetailFive(),
+            SizedBox(height: 45),
+            HomeDetailSix(),
+            SizedBox(height: 30),
+            FooterDesktop(),
             SizedBox(height: 200),
           ],
         ),
