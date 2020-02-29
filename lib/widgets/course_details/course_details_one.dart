@@ -30,16 +30,16 @@ class CourseDetailsOne extends StatelessWidget {
                     Text(
                       "Let's Learn",
                       style: TextStyle(
-                        fontSize: 25,
+                        fontSize: 35,
                         fontWeight: FontWeight.bold,
                         color: Colors.yellow[300],
                       ),
                     ),
                     SizedBox(height: 20),
                     Text(
-                      "New Skill",
+                      "New Skills",
                       style: TextStyle(
-                        fontSize: 35,
+                        fontSize: 55,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
