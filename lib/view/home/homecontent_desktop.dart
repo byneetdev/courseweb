@@ -1,4 +1,7 @@
+import 'package:adminbyneet/widgets/home_details/home_detail_four.dart';
+import 'package:adminbyneet/widgets/home_details/home_details_five.dart';
 import 'package:adminbyneet/widgets/home_details/home_details_one.dart';
+import 'package:adminbyneet/widgets/home_details/home_details_three.dart';
 import 'package:adminbyneet/widgets/home_details/home_details_two.dart';
 import 'package:adminbyneet/widgets/home_details/home_item_card.dart';
 import 'package:adminbyneet/widgets/home_details/home_title_details.dart';
@@ -22,23 +25,19 @@ class HomeContentDesktop extends StatelessWidget {
               buttonText: "Lihat Kursus",
             ),
             SizedBox(height: 30),
-            Container(
-              width: double.infinity,
-              height: 400,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                shrinkWrap: true,
-                children: <Widget>[
-                  HomeItemCard(),
-                  HomeItemCard(),
-                  HomeItemCard(),
-                  HomeItemCard(),
-                  HomeItemCard(),
-                  HomeItemCard(),
-                ],
-              ),
+            HomeDetailThree(),
+            SizedBox(height: 100),
+            HomeTitleDetail(
+              title: "Pilihan terpopuler",
+              buttonText: "Lihat Semua Kursus Populer",
             ),
-            SizedBox(height: 200)
+            SizedBox(height: 30),
+            HomeDetailThree(),
+            SizedBox(height: 30),
+            HomeDetailFour(),
+            SizedBox(height: 45),
+            HomeDetailFive(),
+            SizedBox(height: 200),
           ],
         ),
       ),

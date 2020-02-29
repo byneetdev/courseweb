@@ -34,7 +34,7 @@ class NavigationbarDesktop extends StatelessWidget {
                     color: Colors.black26,
                     borderRadius: BorderRadius.circular(15)),
               ),
-              SizedBox(width: 60),
+              SizedBox(width: 40),
               Row(
                 children: <Widget>[
                   Icon(Icons.person, color: Colors.pink, size: 25),
@@ -42,7 +42,7 @@ class NavigationbarDesktop extends StatelessWidget {
                   NavBarItem(title: "Login", navigationPath: LoginRoute),
                 ],
               ),
-              SizedBox(width: 60),
+              SizedBox(width: 40),
               NavbarButton(
                 title: "Daftar",
                 onPressed: () =>

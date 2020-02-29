@@ -17,7 +17,7 @@ class HomeDetailOne extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 image: DecorationImage(
-                  image: AssetImage("assets/images/girl1.jpg"),
+                  image: AssetImage("assets/images/girl2.jpg"),
                   fit: BoxFit.cover,
                 ),
                 boxShadow: [
