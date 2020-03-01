@@ -1,6 +1,9 @@
+import 'package:adminbyneet/listItem/model/course.dart';
 import 'package:flutter/material.dart';
 
 class CourseItemCard extends StatelessWidget {
+  final Course course;
+  CourseItemCard({this.course});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,7 +19,7 @@ class CourseItemCard extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                  image: AssetImage("assets/images/business.jpg"),
+                  image: AssetImage(course.urlimage),
                   fit: BoxFit.cover,
                 )),
               ),
@@ -26,7 +29,7 @@ class CourseItemCard extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Text(
-                    "User Experience Design Essentials Adobe XD UI UX Design and Flutter Developent",
+                    course.title,
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -36,7 +39,7 @@ class CourseItemCard extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      buildItems("5.0", Icons.star),
+                      buildItems(course.rating.toString(), Icons.star),
                       buildItems("7k", Icons.account_circle),
                       buildItems("120k", Icons.visibility),
                       SizedBox(width: 30),

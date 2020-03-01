@@ -13,37 +13,39 @@ class HomeContentDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            HomeDetailOne(),
-            SizedBox(height: 60),
-            HomeDetailTwo(),
-            SizedBox(height: 100),
-            HomeTitleDetail(
-              title: "Pilih kursus terbaikmu",
-              buttonText: "Lihat Kursus",
-            ),
-            SizedBox(height: 30),
-            HomeDetailThree(),
-            SizedBox(height: 100),
-            HomeTitleDetail(
-              title: "Pilihan terpopuler",
-              buttonText: "Lihat Semua Kursus Populer",
-            ),
-            SizedBox(height: 30),
-            HomeDetailThree(),
-            SizedBox(height: 30),
-            HomeDetailFour(),
-            SizedBox(height: 45),
-            HomeDetailFive(),
-            SizedBox(height: 45),
-            HomeDetailSix(),
-            SizedBox(height: 30),
-            FooterDesktop(),
-            SizedBox(height: 200),
-          ],
+    return Scaffold(
+      body: Container(
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              HomeDetailOne(),
+              SizedBox(height: 60),
+              HomeDetailTwo(),
+              SizedBox(height: 100),
+              HomeTitleDetail(
+                title: "Pilih kursus terbaikmu",
+                buttonText: "Lihat Kursus",
+              ),
+              SizedBox(height: 30),
+              HomeDetailThree(),
+              SizedBox(height: 100),
+              HomeTitleDetail(
+                title: "Pilihan terpopuler",
+                buttonText: "Lihat Semua Kursus Populer",
+              ),
+              SizedBox(height: 30),
+              HomeDetailThree(),
+              SizedBox(height: 30),
+              HomeDetailFour(),
+              SizedBox(height: 45),
+              HomeDetailFive(),
+              SizedBox(height: 45),
+              HomeDetailSix(),
+              SizedBox(height: 30),
+              FooterDesktop(),
+              SizedBox(height: 200),
+            ],
+          ),
         ),
       ),
     );

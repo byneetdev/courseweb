@@ -1,13 +1,12 @@
 import 'package:adminbyneet/constants/lang.dart';
+import 'package:adminbyneet/listItem/dummy/dummyCourse.dart';
 import 'package:adminbyneet/modules/landing/widgets/landing_details_one.dart';
 import 'package:adminbyneet/view/footer/footer_view.dart';
 import 'package:adminbyneet/widgets/call_to_action/call_to_action.dart';
 import 'package:adminbyneet/modules/landing/widgets/landing_categories_items.dart';
-import 'package:adminbyneet/modules/landing/widgets/landing_categories_title.dart';
-import 'package:adminbyneet/modules/landing/widgets/landing_details_five.dart';
 import 'package:adminbyneet/modules/landing/widgets/landing_details_four.dart';
-import 'package:adminbyneet/modules/landing/widgets/landing_details_three.dart';
 import 'package:adminbyneet/modules/landing/widgets/landing_details_two.dart';
+import 'package:adminbyneet/widgets/course_details/course_item_card.dart';
 import 'package:flutter/material.dart';
 
 class LandingContentDesktop extends StatelessWidget {
@@ -76,43 +75,6 @@ class LandingContentDesktop extends StatelessWidget {
                     );
                   },
                 ),
-                // child: Wrap(
-                //   verticalDirection: VerticalDirection.down,
-                //   children: <Widget>[
-                //     LandingCategoriesItems(
-                //       title: "Development",
-                //       urlimage: "assets/images/development.png",
-                //     ),
-                //     LandingCategoriesItems(
-                //       title: "Design",
-                //       urlimage: "assets/images/design.jpg",
-                //     ),
-                //     LandingCategoriesItems(
-                //       title: "Business",
-                //       urlimage: "assets/images/business.jpg",
-                //     ),
-                //     LandingCategoriesItems(
-                //       title: "Marketing",
-                //       urlimage: "assets/images/marketing.jpg",
-                //     ),
-                //     LandingCategoriesItems(
-                //       title: "Photography",
-                //       urlimage: "assets/images/photography.jpg",
-                //     ),
-                //     LandingCategoriesItems(
-                //       title: "Video Editing",
-                //       urlimage: "assets/images/videoediting.jpg",
-                //     ),
-                //     LandingCategoriesItems(
-                //       title: "Web Development",
-                //       urlimage: "assets/images/webdevelopment.jpeg",
-                //     ),
-                //     LandingCategoriesItems(
-                //       title: "UI/UX Designer",
-                //       urlimage: "assets/images/exdesigner.jpeg",
-                //     ),
-                //   ],
-                // ),
               ),
             ),
             SizedBox(height: 30),
@@ -128,16 +90,15 @@ class LandingContentDesktop extends StatelessWidget {
             Container(
               width: double.infinity,
               height: 400,
-              // color: Colors.amber,
-              child: ListView(
+              margin: EdgeInsets.only(left: 70),
+              child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 shrinkWrap: true,
-                children: <Widget>[
-                  LandingDetailFive(),
-                  LandingDetailFive(),
-                  LandingDetailFive(),
-                  LandingDetailFive(),
-                ],
+                itemCount: dummyCourse.length,
+                itemBuilder: (context, index) {
+                  var course = dummyCourse[index];
+                  return CourseItemCard(course: course);
+                },
               ),
             ),
             SizedBox(height: 60),

@@ -1,11 +1,7 @@
-import 'package:adminbyneet/routing/route_names.dart';
-import 'package:adminbyneet/services/navigator_services.dart';
 import 'package:adminbyneet/widgets/navigation_bar/navbar_button.dart';
 import 'package:adminbyneet/widgets/navigation_drawer/drawer_item.dart';
 import 'package:adminbyneet/widgets/navigation_drawer/navigationdrawer_header.dart';
 import 'package:flutter/material.dart';
-
-import '../../locator.dart';
 
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer({Key key}) : super(key: key);
@@ -27,28 +23,21 @@ class NavigationDrawer extends StatelessWidget {
               DrawerItem(
                   title: "Home",
                   icon: Icons.library_books,
-                  navigationPath: HomeRoute),
+                  navigationPath: null),
               DrawerItem(
                   title: "Tentang Kami",
                   icon: Icons.info,
-                  navigationPath: AboutRoute),
+                  navigationPath: null),
               DrawerItem(
-                  title: "Kursus",
-                  icon: Icons.menu,
-                  navigationPath: CourseRoute),
+                  title: "Kursus", icon: Icons.menu, navigationPath: null),
               DrawerItem(
-                  title: "Bantuan",
-                  icon: Icons.help,
-                  navigationPath: HelpRoute),
+                  title: "Bantuan", icon: Icons.help, navigationPath: null),
               DrawerItem(
-                  title: "Login",
-                  icon: Icons.person,
-                  navigationPath: LoginRoute),
+                  title: "Login", icon: Icons.person, navigationPath: null),
               SizedBox(height: 25.0),
               NavbarButton(
                 title: "Daftar",
-                onPressed: () =>
-                    locator<NavigationService>().navigateTo(RegisterRoute),
+                onPressed: () => null,
               ),
             ],
           ),

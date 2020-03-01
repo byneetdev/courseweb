@@ -1,10 +1,6 @@
-import 'package:adminbyneet/routing/route_names.dart';
-import 'package:adminbyneet/services/navigator_services.dart';
 import 'package:adminbyneet/widgets/call_to_action/call_to_action.dart';
 import 'package:adminbyneet/widgets/login_details/login_textfield.dart';
 import 'package:flutter/material.dart';
-
-import '../../locator.dart';
 
 class LoginCard extends StatelessWidget {
   @override
@@ -54,8 +50,7 @@ class LoginCard extends StatelessWidget {
                         Text("Belum punya akun ?"),
                         SizedBox(width: 10),
                         GestureDetector(
-                          onTap: () => locator<NavigationService>()
-                              .navigateTo(RegisterRoute),
+                          onTap: () => null,
                           child: Text(
                             "Daftar",
                             style: TextStyle(

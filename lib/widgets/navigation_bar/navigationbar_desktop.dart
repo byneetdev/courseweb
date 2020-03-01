@@ -1,11 +1,8 @@
-import 'package:adminbyneet/routing/route_names.dart';
-import 'package:adminbyneet/services/navigator_services.dart';
+import 'package:adminbyneet/view/home/homecontent_desktop.dart';
 import 'package:adminbyneet/widgets/navigation_bar/navbar_button.dart';
 import 'package:adminbyneet/widgets/navigation_bar/navbar_item.dart';
 import 'package:adminbyneet/widgets/navigation_bar/navbar_logo.dart';
 import 'package:flutter/material.dart';
-
-import '../../locator.dart';
 
 class NavigationbarDesktop extends StatelessWidget {
   @override
@@ -19,13 +16,20 @@ class NavigationbarDesktop extends StatelessWidget {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              NavBarItem(title: "Home", navigationPath: HomeRoute),
+              NavBarItem(
+                title: "Home",
+                navigationPath: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomeContentDesktop(),
+                    )),
+              ),
               SizedBox(width: 30),
-              NavBarItem(title: "Kursus", navigationPath: CourseRoute),
+              NavBarItem(title: "Kursus", navigationPath: null),
               SizedBox(width: 30),
-              NavBarItem(title: "Bantuan", navigationPath: HelpRoute),
+              NavBarItem(title: "Bantuan", navigationPath: null),
               SizedBox(width: 30),
-              NavBarItem(title: "Tentang Kami", navigationPath: AboutRoute),
+              NavBarItem(title: "Tentang Kami", navigationPath: null),
               SizedBox(width: 30),
               Container(
                 width: 2,
@@ -39,14 +43,13 @@ class NavigationbarDesktop extends StatelessWidget {
                 children: <Widget>[
                   Icon(Icons.person, color: Colors.pink, size: 25),
                   SizedBox(width: 10.0),
-                  NavBarItem(title: "Login", navigationPath: LoginRoute),
+                  NavBarItem(title: "Login", navigationPath: null),
                 ],
               ),
               SizedBox(width: 40),
               NavbarButton(
                 title: "Daftar",
-                onPressed: () =>
-                    locator<NavigationService>().navigateTo(RegisterRoute),
+                onPressed: () => null,
               )
             ],
           )
