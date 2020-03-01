@@ -17,14 +17,6 @@ class LandingCategoriesItems extends StatelessWidget {
             sizingInformation.deviceScreenType == DeviceScreenType.Mobile
                 ? 14
                 : 20;
-        double widthContainer =
-            sizingInformation.deviceScreenType == DeviceScreenType.Mobile
-                ? 120
-                : 200;
-        double heightContainer =
-            sizingInformation.deviceScreenType == DeviceScreenType.Mobile
-                ? 65
-                : 150;
         return Card(
           margin: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 20),
           elevation: 3,
@@ -33,16 +25,10 @@ class LandingCategoriesItems extends StatelessWidget {
           ),
           child: Column(
             children: <Widget>[
-              Container(
-                width: widthContainer,
-                height: heightContainer,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(14),
-                  color: Colors.red,
-                  image: DecorationImage(
-                    image: AssetImage(urlimage),
-                    fit: BoxFit.cover,
-                  ),
+              Expanded(
+                child: Material(
+                  borderRadius: BorderRadius.circular(16),
+                  child: Image.asset(urlimage),
                 ),
               ),
               SizedBox(height: 15),

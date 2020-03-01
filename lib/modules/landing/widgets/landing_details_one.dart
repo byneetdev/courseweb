@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-class LandingCourseOne extends StatelessWidget {
+class LandingDetailOne extends StatelessWidget {
+  final String title;
+  final String description;
+  LandingDetailOne({this.title, this.description});
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
@@ -12,7 +15,7 @@ class LandingCourseOne extends StatelessWidget {
                 : TextAlign.center;
         double titleSize =
             sizingInformation.deviceScreenType == DeviceScreenType.Mobile
-                ? 20
+                ? 35
                 : 50;
         double descriptionSize =
             sizingInformation.deviceScreenType == DeviceScreenType.Mobile
@@ -25,7 +28,7 @@ class LandingCourseOne extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                "Pendidikan adalah masa muda yang sukses",
+                title,
                 textAlign: textAlignment,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -35,7 +38,7 @@ class LandingCourseOne extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Text(
-                "est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae ea dolores neque fugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis qui aperiam non debitis possimus qui neque nisi nulla",
+                description,
                 textAlign: textAlignment,
                 style: TextStyle(fontSize: descriptionSize, height: 1.7),
               ),

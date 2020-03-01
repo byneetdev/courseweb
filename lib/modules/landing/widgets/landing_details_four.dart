@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class LandingDetailFour extends StatelessWidget {
+  final String title;
+  final String description;
+  LandingDetailFour({this.title, this.description});
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
@@ -21,7 +24,7 @@ class LandingDetailFour extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                "Hundred of favorites categories that will you like to learn",
+                title ?? "",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -31,7 +34,7 @@ class LandingDetailFour extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Text(
-                "Choose your favorite categories that you want to learn and get access to hundred of course that available that categories",
+                description ?? "",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: descriptionSize, height: 1.7),
               ),

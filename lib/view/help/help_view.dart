@@ -1,22 +1,16 @@
+import 'package:adminbyneet/view/help/help_desktop.dart';
+import 'package:adminbyneet/view/help/help_mobile.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class HelpView extends StatelessWidget {
   const HelpView({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.brown,
-      child: Center(
-        child: Text(
-          "Help",
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 35,
-          ),
-        ),
-      ),
+    return ScreenTypeLayout(
+      mobile: HelpMobile(),
+      desktop: HelpDesktop(),
     );
   }
 }
