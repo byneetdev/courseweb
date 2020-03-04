@@ -1,11 +1,11 @@
 import 'package:adminbyneet/constants/lang.dart';
+import 'package:adminbyneet/modules/home/widgets/course_home_item.dart';
 import 'package:adminbyneet/modules/home/widgets/customSwiper.dart';
+import 'package:adminbyneet/modules/home/widgets/feature_home_item.dart';
+import 'package:adminbyneet/modules/home/widgets/popular_course_home_item.dart';
 import 'package:adminbyneet/modules/home/widgets/search_home_item.dart';
-import 'package:adminbyneet/modules/home/widgets/swiperItemOne.dart';
-import 'package:adminbyneet/modules/home/widgets/swiperItemTwo.dart';
 import 'package:adminbyneet/modules/navigation_bar/navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
 
 class HomeDesktop extends StatelessWidget {
   @override
@@ -20,6 +20,12 @@ class HomeDesktop extends StatelessWidget {
               CustomCarousel(),
               SizedBox(height: 100),
               SearchHomeItem(),
+              SizedBox(height: 70),
+              FeatureHomeItem(),
+              SizedBox(height: 70),
+              PopularCourseHomeItem(),
+              SizedBox(height: 20),
+              CourseHomeItem(),
               SizedBox(height: 500),
             ],
           ),

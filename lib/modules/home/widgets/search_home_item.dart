@@ -22,15 +22,9 @@ class SearchHomeItem extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  CircleAvatar(
-                    radius: 5,
-                    backgroundColor: Colors.blueAccent,
-                  ),
+                  buildCircle(),
                   SizedBox(width: 12),
-                  CircleAvatar(
-                    radius: 5,
-                    backgroundColor: Colors.blueAccent,
-                  ),
+                  buildCircle(),
                   SizedBox(width: 16),
                   Text(
                     kSkillBaru,
@@ -40,15 +34,9 @@ class SearchHomeItem extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: 16),
-                  CircleAvatar(
-                    radius: 5,
-                    backgroundColor: Colors.blueAccent,
-                  ),
+                  buildCircle(),
                   SizedBox(width: 12),
-                  CircleAvatar(
-                    radius: 5,
-                    backgroundColor: Colors.blueAccent,
-                  ),
+                  buildCircle(),
                 ],
               ),
               SizedBox(height: 10),
@@ -210,5 +198,12 @@ class SearchHomeItem extends StatelessWidget {
         ),
       );
     });
+  }
+
+  Widget buildCircle() {
+    return CircleAvatar(
+      radius: 5,
+      backgroundColor: Colors.blueAccent,
+    );
   }
 }
