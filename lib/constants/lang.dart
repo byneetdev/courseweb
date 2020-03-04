@@ -23,3 +23,24 @@ const String feature8 = "Kursus populer kami";
 const String feature9 =
     "Berikut ini adalah kursus populer kami, banyak developer yang belajar menggunakan kursus ini untuk membuat banyak karya";
 const String feature10 = "Lihat semua kursus";
+
+const String home1 = "Pelajar bidang\nyang kamu suka";
+const String home2 = "Dimana saja, kapan saja, kapan pun kamu mau";
+const String home3 = "Rekomendasi untuk kamu";
+const String home4 = "Pilihan terpopuler";
+const String home5 = "Ayo kembangkan karir di era 4.0 setiap hari!";
+const String home6 =
+    "Kursus yang kami miliki sangat mudah dimengerti untuk yang sudah pernah atau belum sama sekali";
+const String home7 = "Review anggota yang sudah mendaftar";
+
+const String searchCourse = "Cari kursus...";
+
+const String kKursus = "KURSUS";
+const String kKontak = "KONTAK";
+const String kTentang = "TENTANG KAMI";
+const String kLogin = "LOGIN";
+const String kDaftar = "DAFTAR";
+const String kLihatKursus = "LIHAT KURSUS";
+const String kCariKursus = "CARI KURSUS";
+const String kSwiper1 = "Banyak Kursus Bagus untuk Kamu";
+const String kSwiper2 = "Cari Kursus Terbaik Kami";
