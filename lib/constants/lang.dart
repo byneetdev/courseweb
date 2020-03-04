@@ -44,3 +44,8 @@ const String kLihatKursus = "LIHAT KURSUS";
 const String kCariKursus = "CARI KURSUS";
 const String kSwiper1 = "Banyak Kursus Bagus untuk Kamu";
 const String kSwiper2 = "Cari Kursus Terbaik Kami";
+const String kSkillBaru = "PELAJARI SKILL BARU";
+
+const String xCari = "Cari";
+const String xKursus = "Kursus";
+const String xHintCari = "Cari apa yang kamu ingin pelajari hari ini";

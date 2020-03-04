@@ -89,7 +89,7 @@ class SwiperItemTwo extends StatelessWidget {
                                                   height: 2.0,
                                                 ),
                                                 decoration: InputDecoration(
-                                                  hintText: "Cari...",
+                                                  hintText: xHintCari,
                                                   hintStyle: TextStyle(
                                                     fontSize: 17,
                                                     height: 2.0,
@@ -147,7 +147,7 @@ class SwiperItemTwo extends StatelessWidget {
                                                   height: 2.0,
                                                 ),
                                                 decoration: InputDecoration(
-                                                  hintText: "Cari...",
+                                                  hintText: xHintCari,
                                                   hintStyle: TextStyle(
                                                     fontSize: 17,
                                                     height: 2.0,

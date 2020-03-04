@@ -1,5 +1,6 @@
 import 'package:adminbyneet/constants/lang.dart';
 import 'package:adminbyneet/modules/home/widgets/customSwiper.dart';
+import 'package:adminbyneet/modules/home/widgets/search_home_item.dart';
 import 'package:adminbyneet/modules/home/widgets/swiperItemOne.dart';
 import 'package:adminbyneet/modules/home/widgets/swiperItemTwo.dart';
 import 'package:adminbyneet/modules/navigation_bar/navigation_bar.dart';
@@ -17,7 +18,9 @@ class HomeDesktop extends StatelessWidget {
             children: <Widget>[
               NavigationBar(),
               CustomCarousel(),
-              SizedBox(height: 400),
+              SizedBox(height: 100),
+              SearchHomeItem(),
+              SizedBox(height: 500),
             ],
           ),
         ),

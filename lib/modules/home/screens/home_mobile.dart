@@ -1,8 +1,6 @@
 import 'package:adminbyneet/modules/home/widgets/customSwiper.dart';
-import 'package:adminbyneet/modules/home/widgets/swiperItemOne.dart';
-import 'package:adminbyneet/modules/home/widgets/swiperItemTwo.dart';
+import 'package:adminbyneet/modules/home/widgets/search_home_item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
 
 class HomeMobile extends StatelessWidget {
   @override
@@ -19,7 +17,12 @@ class HomeMobile extends StatelessWidget {
       body: Container(
         child: SingleChildScrollView(
           child: Column(
-            children: <Widget>[CustomCarousel()],
+            children: <Widget>[
+              CustomCarousel(),
+              SizedBox(height: 70),
+              SearchHomeItem(),
+              SizedBox(height: 100),
+            ],
           ),
         ),
       ),
