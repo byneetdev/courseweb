@@ -3,6 +3,7 @@ import 'package:adminbyneet/modules/home/widgets/customSwiper.dart';
 import 'package:adminbyneet/modules/home/widgets/feature_home_item.dart';
 import 'package:adminbyneet/modules/home/widgets/popular_course_home_item.dart';
 import 'package:adminbyneet/modules/home/widgets/search_home_item.dart';
+import 'package:adminbyneet/modules/home/widgets/testimonial_home_item.dart';
 import 'package:flutter/material.dart';
 
 class HomeMobile extends StatelessWidget {
@@ -30,6 +31,8 @@ class HomeMobile extends StatelessWidget {
               PopularCourseHomeItem(),
               SizedBox(height: 20),
               CourseHomeItem(),
+              SizedBox(height: 50),
+              TestimonialHomeItem(),
               SizedBox(height: 100),
             ],
           ),

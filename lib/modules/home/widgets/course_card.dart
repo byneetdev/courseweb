@@ -20,6 +20,7 @@ class CourseCard extends StatelessWidget {
         width: containerWidth,
         margin: EdgeInsets.only(right: 20),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
               width: containerWidth,
@@ -31,8 +32,9 @@ class CourseCard extends StatelessWidget {
                     fit: BoxFit.cover,
                   )),
             ),
+            SizedBox(height: 12),
             Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Text(
                 course.title,
                 overflow: TextOverflow.ellipsis,
@@ -43,20 +45,52 @@ class CourseCard extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 0),
-              padding: EdgeInsets.symmetric(vertical: 10),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(14),
-                  color: Colors.blueAccent),
+            SizedBox(height: 12),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Text(
-                course.classStatus,
+                course.creatorName,
+                overflow: TextOverflow.ellipsis,
+                textAlign: TextAlign.left,
                 style: TextStyle(
                   fontSize: 17,
-                  color: Colors.white,
+                  color: Colors.black54,
                 ),
               ),
+            ),
+            SizedBox(height: 12),
+            Row(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(14),
+                    color: Colors.amber,
+                  ),
+                  child: Text(
+                    course.classStatus,
+                    style: TextStyle(
+                      fontSize: 17,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Row(
+                  children: <Widget>[
+                    Icon(Icons.star, color: Colors.amber),
+                    SizedBox(width: 7),
+                    Text(
+                      course.rating.toString(),
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    )
+                  ],
+                )
+              ],
             )
           ],
         ),
