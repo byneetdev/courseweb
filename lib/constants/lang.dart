@@ -49,5 +49,7 @@ const String kSkillBaru = "PELAJARI SKILL BARU";
 const String xCari = "Cari";
 const String xPopular = "Popular";
 const String xKursus = "Kursus";
+const String xKontak = "Kontak";
+const String xTentang = "Tentang kami";
 const String xHintCari = "Cari apa yang kamu ingin pelajari hari ini";
 const String xAkses = "Akses Selamanya";

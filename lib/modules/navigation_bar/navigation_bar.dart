@@ -1,4 +1,5 @@
 import 'package:adminbyneet/constants/lang.dart';
+import 'package:adminbyneet/modules/course/screens/course_view.dart';
 import 'package:adminbyneet/modules/navigation_bar/navbar_button.dart';
 import 'package:adminbyneet/modules/navigation_bar/navbar_item.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +29,15 @@ class NavigationBar extends StatelessWidget {
           Row(
             // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              NavBarItem(title: kKursus, onTap: null),
+              NavBarItem(
+                  title: kKursus,
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CourseView(),
+                        ));
+                  }),
               SizedBox(width: 22),
               NavBarItem(title: kKontak, onTap: null),
               SizedBox(width: 22),
