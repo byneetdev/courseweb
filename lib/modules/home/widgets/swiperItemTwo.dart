@@ -62,157 +62,57 @@ class SwiperItemTwo extends StatelessWidget {
                               ),
                             ),
                             SizedBox(height: 14),
-                            Container(
-                              width: 500,
-                              height: 300,
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: sizingInformation.deviceScreenType ==
-                                      DeviceScreenType.Mobile
-                                  ? Column(
-                                      // mainAxisAlignment:
-                                      //     MainAxisAlignment.spaceBetween,
-                                      children: <Widget>[
-                                        SizedBox(
-                                          width: 370,
-                                          height: 60,
-                                          child: Card(
-                                            child: Padding(
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                      horizontal: 8.0),
-                                              child: TextField(
-                                                style: TextStyle(
-                                                  fontSize: 17,
-                                                  height: 2.0,
-                                                ),
-                                                decoration: InputDecoration(
-                                                  hintText: xHintCari,
-                                                  hintStyle: TextStyle(
-                                                    fontSize: 17,
-                                                    height: 2.0,
-                                                  ),
-                                                  border: InputBorder.none,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
+                            Row(
+                              children: <Widget>[
+                                Expanded(
+                                  child: Card(
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 8.0),
+                                      child: TextField(
+                                        style: TextStyle(
+                                          fontSize: 17,
+                                          height: 2.0,
                                         ),
-                                        SizedBox(height: 15),
-                                        Container(
-                                          width: 130,
-                                          height: 50,
-                                          decoration: BoxDecoration(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                              gradient: LinearGradient(
-                                                colors: [
-                                                  Colors.blue,
-                                                  Colors.blueAccent,
-                                                  Colors.blue[200],
-                                                ],
-                                                begin: Alignment.centerLeft,
-                                                end: Alignment.centerRight,
-                                              )),
-                                          child: Center(
-                                            child: Text(
-                                              kCariKursus,
-                                              style: TextStyle(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.w700,
-                                                color: Colors.white,
-                                              ),
-                                            ),
+                                        decoration: InputDecoration(
+                                          hintText: xHintCari,
+                                          hintStyle: TextStyle(
+                                            fontSize: 17,
+                                            height: 2.0,
                                           ),
-                                        )
-                                      ],
-                                    )
-                                  : Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: <Widget>[
-                                        SizedBox(
-                                          width: 370,
-                                          height: 60,
-                                          child: Card(
-                                            child: Padding(
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                      horizontal: 8.0),
-                                              child: TextField(
-                                                style: TextStyle(
-                                                  fontSize: 17,
-                                                  height: 2.0,
-                                                ),
-                                                decoration: InputDecoration(
-                                                  hintText: xHintCari,
-                                                  hintStyle: TextStyle(
-                                                    fontSize: 17,
-                                                    height: 2.0,
-                                                  ),
-                                                  border: InputBorder.none,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
+                                          border: InputBorder.none,
                                         ),
-                                        Container(
-                                          width: 130,
-                                          height: 50,
-                                          decoration: BoxDecoration(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                              gradient: LinearGradient(
-                                                colors: [
-                                                  Colors.blue,
-                                                  Colors.blueAccent,
-                                                  Colors.blue[200],
-                                                ],
-                                                begin: Alignment.centerLeft,
-                                                end: Alignment.centerRight,
-                                              )),
-                                          child: Center(
-                                            child: Text(
-                                              kCariKursus,
-                                              style: TextStyle(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.w700,
-                                                color: Colors.white,
-                                              ),
-                                            ),
-                                          ),
-                                        )
-                                      ],
+                                      ),
                                     ),
+                                  ),
+                                ),
+                                Container(
+                                  width: 130,
+                                  height: 60,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      gradient: LinearGradient(
+                                        colors: [
+                                          Colors.blue,
+                                          Colors.blueAccent,
+                                          Colors.blue[200],
+                                        ],
+                                        begin: Alignment.centerLeft,
+                                        end: Alignment.centerRight,
+                                      )),
+                                  child: Center(
+                                    child: Text(
+                                      kCariKursus,
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              ],
                             )
-                            // Card(
-                            //   elevation: 2,
-                            //   child: TextField(
-                            //     decoration: InputDecoration(
-                            //       border: OutlineInputBorder(
-                            //           borderSide:
-                            //               BorderSide(color: Colors.white)),
-                            //       suffixIcon: Container(
-                            //         width: 100,
-                            //         decoration: BoxDecoration(
-                            //           color: Colors.blue,
-                            //         ),
-                            //         child: Center(
-                            //           child: Text(
-                            //             kCariKursus,
-                            //             style: TextStyle(
-                            //               fontSize: 20,
-                            //               fontWeight: FontWeight.w700,
-                            //               color: Colors.white,
-                            //             ),
-                            //           ),
-                            //         ),
-                            //       ),
-                            //     ),
-                            //   ),
-                            // )
                           ],
                         ),
                       )

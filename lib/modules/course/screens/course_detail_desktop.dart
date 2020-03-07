@@ -1,28 +1,41 @@
 import 'package:adminbyneet/constants/lang.dart';
+import 'package:adminbyneet/listItem/model/course.dart';
 import 'package:adminbyneet/modules/course/screens/course_view.dart';
-import 'package:adminbyneet/modules/course/widgets/course_grid_view.dart';
-import 'package:adminbyneet/modules/course/widgets/header_course_item.dart';
-import 'package:adminbyneet/modules/course/widgets/search_course_item.dart';
+import 'package:adminbyneet/modules/course/widgets/course_claim_card.dart';
+import 'package:adminbyneet/modules/course/widgets/course_detail_widget.dart';
 import 'package:adminbyneet/modules/home/screens/home_view.dart';
 import 'package:adminbyneet/modules/navigation_bar/navbar_button.dart';
 import 'package:adminbyneet/modules/navigation_bar/navbar_item.dart';
 import 'package:flutter/material.dart';
 
-class CourseDesktop extends StatelessWidget {
+class CourseDetailDesktop extends StatelessWidget {
+  final Course course;
+  CourseDetailDesktop({this.course});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBarWidget(context),
       body: Container(
+        margin: EdgeInsets.symmetric(horizontal: 70),
         child: SingleChildScrollView(
+          padding: EdgeInsets.only(top: 60),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              HeaderCourseItem(),
-              SizedBox(height: 100),
-              SearchCourseItem(),
-              SizedBox(height: 100),
-              CourseGridView(),
-              SizedBox(height: 1000),
+              Table(
+                // border: TableBorder.all(),
+                columnWidths: {1: FractionColumnWidth(.3)},
+                children: [
+                  TableRow(
+                    children: [
+                      CourseDetailWidget(course: course),
+                      CourseClaimCard(course: course),
+                    ],
+                  )
+                ],
+              ),
+              SizedBox(height: 100)
             ],
           ),
         ),

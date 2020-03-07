@@ -35,6 +35,11 @@ const String home7 = "Review anggota yang sudah mendaftar";
 
 const String searchCourse = "Cari kursus...";
 
+const String hintEmail = "you@example.com";
+const String hintPass = "Masukkan password";
+const String hintKeahlian = "Cth: Android Developer";
+const String hintNama = "Masukkan nama kamu";
+
 const String kKursus = "KURSUS";
 const String kKontak = "KONTAK";
 const String kTentang = "TENTANG KAMI";
@@ -53,3 +58,23 @@ const String xKontak = "Kontak";
 const String xTentang = "Tentang kami";
 const String xHintCari = "Cari apa yang kamu ingin pelajari hari ini";
 const String xAkses = "Akses Selamanya";
+const String xBeliNow = "Beli sekarang";
+const String xMencakup = "Kursus ini mencakup:";
+const String xAksesSeumurHidup = "Akses penuh seumur hidup";
+const String xMultiPlatform = "Akses ke semua platform";
+const String xSertifikat = "Sertifikat penyelesaian";
+const String xLatihanCoding = "latihan coding";
+const String xArtikel = "Artikel";
+const String xPeringkat = "Rating";
+const String xDaftarkeWishlist = "Daftar ke wishlist";
+const String xBagikan = "Bagikan";
+const String xKurikulum = "Kurikulum";
+const String xEmail = "Email address";
+const String xPassword = "Password";
+const String xLupaPass = "Lupa password?";
+const String xSignIn = "Sign in";
+const String xSignUp = "Sign up";
+const String xBelumPunyaAkun = "Belum punya akun ?";
+const String xDaftar = "Daftar";
+const String xKeahlian = "Keahlian";
+const String xNama = "Nama lengkap";

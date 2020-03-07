@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:adminbyneet/constants/lang.dart';
 
-class NavbarButton extends StatelessWidget {
-  final String title;
-  final Function onTap;
-  NavbarButton({this.title, this.onTap});
+class LoginButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 100,
-      height: 40,
+      width: double.infinity,
+      height: 50,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(14.0),
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(30),
+            topLeft: Radius.circular(30),
+            bottomRight: Radius.circular(30),
+          ),
           gradient: LinearGradient(
             colors: [
               Colors.blue,
@@ -21,13 +23,17 @@ class NavbarButton extends StatelessWidget {
             end: Alignment.centerRight,
           )),
       child: RaisedButton(
-        onPressed: onTap,
+        onPressed: () {},
         color: Colors.transparent,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(14.0),
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(30),
+            topLeft: Radius.circular(30),
+            bottomRight: Radius.circular(30),
+          ),
         ),
         child: Text(
-          title,
+          xSignIn,
           style: TextStyle(
             fontSize: 17,
             fontWeight: FontWeight.bold,

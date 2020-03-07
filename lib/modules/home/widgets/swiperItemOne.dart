@@ -38,8 +38,8 @@ class SwiperItemOne extends StatelessWidget {
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      Colors.black12,
-                      Colors.black87,
+                      Colors.black38,
+                      Colors.black45,
                     ],
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,

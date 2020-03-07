@@ -1,4 +1,3 @@
-import 'package:adminbyneet/modules/navigation_bar/navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:adminbyneet/constants/lang.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -32,12 +31,6 @@ class HeaderCourseItem extends StatelessWidget {
                   )),
                 ),
               ),
-              sizingInformation.deviceScreenType == DeviceScreenType.Mobile
-                  ? Container()
-                  : sizingInformation.deviceScreenType ==
-                          DeviceScreenType.Tablet
-                      ? Container()
-                      : NavigationBar(),
               Center(
                 child: Text(
                   kKursus,

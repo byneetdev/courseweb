@@ -52,7 +52,7 @@ class CourseCardHome extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Text(
-                  course.creatorName,
+                  course.creator,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
                   style: TextStyle(
@@ -73,7 +73,7 @@ class CourseCardHome extends StatelessWidget {
                       color: Colors.amber,
                     ),
                     child: Text(
-                      course.classStatus,
+                      course.status,
                       style: TextStyle(
                         fontSize: 17,
                         color: Colors.white,

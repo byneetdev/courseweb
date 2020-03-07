@@ -1,28 +1,30 @@
 import 'package:adminbyneet/constants/lang.dart';
 import 'package:adminbyneet/modules/course/screens/course_view.dart';
-import 'package:adminbyneet/modules/course/widgets/course_grid_view.dart';
-import 'package:adminbyneet/modules/course/widgets/header_course_item.dart';
-import 'package:adminbyneet/modules/course/widgets/search_course_item.dart';
+import 'package:adminbyneet/modules/course/widgets/exam_navigation.dart';
+import 'package:adminbyneet/modules/course/widgets/exam_paper.dart';
 import 'package:adminbyneet/modules/home/screens/home_view.dart';
 import 'package:adminbyneet/modules/navigation_bar/navbar_button.dart';
 import 'package:adminbyneet/modules/navigation_bar/navbar_item.dart';
 import 'package:flutter/material.dart';
 
-class CourseDesktop extends StatelessWidget {
+class ExamDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBarWidget(context),
       body: Container(
+        margin: EdgeInsets.symmetric(horizontal: 80),
         child: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              HeaderCourseItem(),
-              SizedBox(height: 100),
-              SearchCourseItem(),
-              SizedBox(height: 100),
-              CourseGridView(),
-              SizedBox(height: 1000),
+          padding: EdgeInsets.only(top: 100),
+          child: Table(
+            columnWidths: {1: FractionColumnWidth(0.3)},
+            children: [
+              TableRow(
+                children: [
+                  ExamPaper(),
+                  ExamNavigation(),
+                ],
+              ),
             ],
           ),
         ),
