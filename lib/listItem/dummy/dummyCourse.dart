@@ -9,7 +9,7 @@ List<Course> dummyCourse = [
           "Flutter Experience Design Essentials Adobe XD UI/UX Design with Flutter Developer",
       status: "Premium",
       creator: "Jessica Veranda",
-      price: "2.500.000",
+      price: 2500000,
       description:
           "Become a full-stack web developer with just one course. HTML, CSS, Javascript, Node, React, MongoDB and more! ",
       rating: 5.0,
@@ -69,7 +69,7 @@ List<Course> dummyCourse = [
           "Flutter Experience Design Essentials Adobe XD UI/UX Design with Flutter Developer",
       status: "Premium",
       creator: "Jessica Veranda",
-      price: "2.500.000",
+      price: 2500000,
       description:
           "Become a full-stack web developer with just one course. HTML, CSS, Javascript, Node, React, MongoDB and more! ",
       rating: 5.0,
@@ -129,7 +129,7 @@ List<Course> dummyCourse = [
           "Flutter Experience Design Essentials Adobe XD UI/UX Design with Flutter Developer",
       status: "Premium",
       creator: "Jessica Veranda",
-      price: "2.500.000",
+      price: 2500000,
       description:
           "Become a full-stack web developer with just one course. HTML, CSS, Javascript, Node, React, MongoDB and more! ",
       rating: 5.0,
@@ -189,7 +189,7 @@ List<Course> dummyCourse = [
           "Flutter Experience Design Essentials Adobe XD UI/UX Design with Flutter Developer",
       status: "Premium",
       creator: "Jessica Veranda",
-      price: "2.500.000",
+      price: 2500000,
       description:
           "Become a full-stack web developer with just one course. HTML, CSS, Javascript, Node, React, MongoDB and more! ",
       rating: 5.0,
@@ -249,7 +249,7 @@ List<Course> dummyCourse = [
           "Flutter Experience Design Essentials Adobe XD UI/UX Design with Flutter Developer",
       status: "Premium",
       creator: "Jessica Veranda",
-      price: "2.500.000",
+      price: 2500000,
       description:
           "Become a full-stack web developer with just one course. HTML, CSS, Javascript, Node, React, MongoDB and more! ",
       rating: 5.0,
