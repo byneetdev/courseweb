@@ -5,6 +5,8 @@
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
 
+  <meta name="google-signin-client_id" content="612874173090-ktji5bpmtvmd7pd0tq9us8fe6gfpv4su.apps.googleusercontent.com">
+
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -28,6 +30,34 @@
       });
     }
   </script>
+  <!-- firebase js -->
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
+  <!-- <script src="/__/firebase/init.js"></script> -->
+
+  
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBw1eSnkma2XqJmzoT3jEE6V4lAuECBUFQ",
+    authDomain: "byneet-course.firebaseapp.com",
+    databaseURL: "https://byneet-course.firebaseio.com",
+    projectId: "byneet-course",
+    storageBucket: "byneet-course.appspot.com",
+    messagingSenderId: "612874173090",
+    appId: "1:612874173090:web:a38f1bd745cdcac695b5fb",
+    measurementId: "G-E631SGJ3JK"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+  
+  <!-- end firebase js -->
   <script src="main.dart.js" type="application/javascript"></script>
 </body>
 </html>
