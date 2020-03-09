@@ -1,10 +1,28 @@
+import 'package:adminbyneet/modules/login/service/login_service.dart';
 import 'package:adminbyneet/modules/login/widgets/custom_textfield.dart';
 import 'package:adminbyneet/modules/login/widgets/login_button.dart';
 import 'package:adminbyneet/modules/register/screens/register_view.dart';
 import 'package:flutter/material.dart';
 import 'package:adminbyneet/constants/lang.dart';
+import 'package:provider/provider.dart';
 
-class LoginDesktop extends StatelessWidget {
+class LoginDesktop extends StatefulWidget {
+  @override
+  _LoginDesktopState createState() => _LoginDesktopState();
+}
+
+class _LoginDesktopState extends State<LoginDesktop> {
+  TextEditingController temail;
+  TextEditingController tpass;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    temail = TextEditingController();
+    tpass = TextEditingController();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,12 +45,14 @@ class LoginDesktop extends StatelessWidget {
                   ),
                   SizedBox(height: 50),
                   CustomTextField(
+                    controller: temail,
                     title: xEmail,
                     hintText: hintEmail,
                     isPassword: false,
                   ),
                   SizedBox(height: 20),
                   CustomTextField(
+                    controller: tpass,
                     title: hintPass,
                     hintText: hintPass,
                     isPassword: true,
@@ -51,7 +71,7 @@ class LoginDesktop extends StatelessWidget {
                         )),
                   ),
                   SizedBox(height: 20),
-                  LoginButton(),
+                  LoginButton(email: temail.text, pass: tpass.text),
                   SizedBox(height: 20),
                   FlatButton(
                     onPressed: () {

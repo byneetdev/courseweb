@@ -4,7 +4,9 @@ class CustomTextField extends StatelessWidget {
   final String title;
   final String hintText;
   final bool isPassword;
-  CustomTextField({this.title, this.hintText, this.isPassword});
+  final TextEditingController controller;
+  CustomTextField(
+      {this.title, this.hintText, this.isPassword, this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +21,7 @@ class CustomTextField extends StatelessWidget {
           ),
         ),
         TextField(
+          controller: controller,
           obscureText: isPassword,
           decoration: InputDecoration(
             hintText: hintText,
