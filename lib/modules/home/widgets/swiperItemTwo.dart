@@ -1,3 +1,4 @@
+import 'package:adminbyneet/constants/app_color.dart';
 import 'package:adminbyneet/constants/lang.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -48,14 +49,14 @@ class SwiperItemTwo extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       Container(
-                        width: 500,
+                        width: 1500,
+                        padding: EdgeInsets.symmetric(horizontal: 120),
                         child: Column(
                           children: <Widget>[
                             Text(
                               kSwiper2,
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                //sudah
                                 fontSize: titleSize,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
@@ -66,22 +67,18 @@ class SwiperItemTwo extends StatelessWidget {
                               children: <Widget>[
                                 Expanded(
                                   child: Card(
-                                    child: Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 8.0),
-                                      child: TextField(
-                                        style: TextStyle(
+                                    child: TextField(
+                                      style: TextStyle(
+                                        fontSize: 17,
+                                        height: 2.0,
+                                      ),
+                                      decoration: InputDecoration(
+                                        hintText: xHintCari,
+                                        hintStyle: TextStyle(
                                           fontSize: 17,
                                           height: 2.0,
                                         ),
-                                        decoration: InputDecoration(
-                                          hintText: xHintCari,
-                                          hintStyle: TextStyle(
-                                            fontSize: 17,
-                                            height: 2.0,
-                                          ),
-                                          border: InputBorder.none,
-                                        ),
+                                        border: InputBorder.none,
                                       ),
                                     ),
                                   ),
@@ -90,16 +87,9 @@ class SwiperItemTwo extends StatelessWidget {
                                   width: 130,
                                   height: 60,
                                   decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      gradient: LinearGradient(
-                                        colors: [
-                                          Colors.blue,
-                                          Colors.blueAccent,
-                                          Colors.blue[200],
-                                        ],
-                                        begin: Alignment.centerLeft,
-                                        end: Alignment.centerRight,
-                                      )),
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Color(primaryColor),
+                                  ),
                                   child: Center(
                                     child: Text(
                                       kCariKursus,
@@ -112,7 +102,7 @@ class SwiperItemTwo extends StatelessWidget {
                                   ),
                                 )
                               ],
-                            )
+                            ),
                           ],
                         ),
                       )

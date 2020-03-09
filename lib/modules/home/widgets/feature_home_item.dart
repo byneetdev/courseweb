@@ -1,3 +1,4 @@
+import 'package:adminbyneet/constants/app_color.dart';
 import 'package:adminbyneet/constants/lang.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -46,7 +47,7 @@ class FeatureHomeItem extends StatelessWidget {
       children: <Widget>[
         CircleAvatar(
           radius: 30,
-          backgroundColor: Colors.deepPurpleAccent,
+          backgroundColor: Color(primaryColor),
           child: Icon(
             icon,
             color: Colors.white,

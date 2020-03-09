@@ -86,7 +86,10 @@ class ExamDesktop extends StatelessWidget {
                 SizedBox(width: 15),
                 NavBarItem(title: kLogin, onTap: null),
                 SizedBox(width: 22),
-                NavbarButton(title: kDaftar),
+                NavbarButton(
+                  title: kDaftar,
+                  onTap: () {},
+                ),
               ],
             ),
           ],

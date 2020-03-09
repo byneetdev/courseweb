@@ -1,3 +1,4 @@
+import 'package:adminbyneet/constants/app_color.dart';
 import 'package:adminbyneet/listItem/model/course.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -15,7 +16,7 @@ class CourseCardHome extends StatelessWidget {
       double containerHeight =
           sizingInformation.deviceScreenType == DeviceScreenType.Mobile
               ? 120
-              : 270;
+              : 250;
       return Container(
         width: containerWidth,
         margin: EdgeInsets.only(right: 20),
@@ -40,15 +41,15 @@ class CourseCardHome extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Text(
                   course.title,
-                  overflow: TextOverflow.ellipsis,
-                  textAlign: TextAlign.center,
+                  maxLines: 2,
+                  textAlign: TextAlign.left,
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
-              SizedBox(height: 12),
+              SizedBox(height: 7),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Text(
@@ -70,7 +71,7 @@ class CourseCardHome extends StatelessWidget {
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(14),
-                      color: Colors.amber,
+                      color: Color(primaryColor),
                     ),
                     child: Text(
                       course.status,
@@ -82,7 +83,7 @@ class CourseCardHome extends StatelessWidget {
                   ),
                   Row(
                     children: <Widget>[
-                      Icon(Icons.star, color: Colors.amber),
+                      Icon(Icons.star, color: Color(primaryColor)),
                       SizedBox(width: 7),
                       Text(
                         course.rating.toString(),
@@ -94,7 +95,8 @@ class CourseCardHome extends StatelessWidget {
                     ],
                   )
                 ],
-              )
+              ),
+              SizedBox(height: 10),
             ],
           ),
         ),

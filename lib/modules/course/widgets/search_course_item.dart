@@ -60,7 +60,10 @@ class SearchCourseItem extends StatelessWidget {
                           ),
                         ),
                       ),
-                      NavbarButton(title: xCari),
+                      NavbarButton(
+                        title: xCari,
+                        onTap: () {},
+                      ),
                     ],
                   ),
                 ),

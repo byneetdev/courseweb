@@ -1,3 +1,4 @@
+import 'package:adminbyneet/constants/app_color.dart';
 import 'package:adminbyneet/constants/lang.dart';
 import 'package:adminbyneet/listItem/model/course.dart';
 import 'package:adminbyneet/modules/course/widgets/curriculum_widget.dart';
@@ -34,7 +35,7 @@ class CourseDetailWidget extends StatelessWidget {
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
-              color: Colors.amber,
+              color: Color(primaryColor),
             ),
           ),
           SizedBox(height: 25),
@@ -79,12 +80,12 @@ class CourseDetailWidget extends StatelessWidget {
             Text(
               title,
               style: TextStyle(
-                color: Colors.blue,
+                color: Color(primaryColor),
                 fontWeight: FontWeight.w600,
               ),
             ),
             SizedBox(width: 10),
-            Icon(icon, color: Colors.blue)
+            Icon(icon, color: Color(primaryColor))
           ],
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:adminbyneet/constants/app_color.dart';
 import 'package:adminbyneet/listItem/dummy/dummyReview.dart';
 import 'package:adminbyneet/modules/home/widgets/review_card.dart';
 import 'package:flutter/material.dart';
@@ -77,7 +78,7 @@ class TestimonialHomeItem extends StatelessWidget {
                     width: 100,
                     height: 3,
                     child: Divider(
-                      color: Colors.blue[200],
+                      color: Color(primaryColor),
                       height: 5,
                     ),
                   ),

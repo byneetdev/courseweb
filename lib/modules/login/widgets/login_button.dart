@@ -1,3 +1,4 @@
+import 'package:adminbyneet/constants/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:adminbyneet/constants/lang.dart';
 
@@ -13,18 +14,10 @@ class LoginButton extends StatelessWidget {
             topLeft: Radius.circular(30),
             bottomRight: Radius.circular(30),
           ),
-          gradient: LinearGradient(
-            colors: [
-              Colors.blue,
-              Colors.blueAccent,
-              Colors.blue[200],
-            ],
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
-          )),
+          color: Color(primaryColor)),
       child: RaisedButton(
         onPressed: () {},
-        color: Colors.transparent,
+        color: Color(primaryColor),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(30),

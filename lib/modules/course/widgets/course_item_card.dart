@@ -1,3 +1,4 @@
+import 'package:adminbyneet/constants/app_color.dart';
 import 'package:adminbyneet/listItem/model/course.dart';
 import 'package:adminbyneet/modules/course/screens/course_detail_view.dart';
 import 'package:flutter/material.dart';
@@ -60,10 +61,10 @@ class CourseItemCard extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w700,
-                            color: Colors.amber,
+                            color: Color(primaryColor),
                           ),
                         ),
-                        Icon(Icons.star, color: Colors.amber)
+                        Icon(Icons.star, color: Color(primaryColor))
                       ],
                     ),
                     SizedBox(height: 5),

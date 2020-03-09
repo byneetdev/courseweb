@@ -1,3 +1,4 @@
+import 'package:adminbyneet/constants/app_color.dart';
 import 'package:adminbyneet/constants/lang.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -73,7 +74,7 @@ class PopularCourseHomeItem extends StatelessWidget {
   Widget buildCircle() {
     return CircleAvatar(
       radius: 5,
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: Color(primaryColor),
     );
   }
 }

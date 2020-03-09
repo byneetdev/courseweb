@@ -1,3 +1,4 @@
+import 'package:adminbyneet/constants/app_color.dart';
 import 'package:adminbyneet/constants/lang.dart';
 import 'package:adminbyneet/listItem/model/course.dart';
 import 'package:adminbyneet/modules/course/screens/exam_view.dart';
@@ -52,7 +53,9 @@ class CourseClaimCard extends StatelessWidget {
                               builder: (context) => ExamView(),
                             ));
                       },
-                      color: Colors.redAccent,
+                      color: Color(primaryColor),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
                       child: Text(
                         xBeliNow,
                         style: TextStyle(

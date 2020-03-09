@@ -8,7 +8,6 @@ class CourseView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
       mobile: CourseMobile(),
-      // tablet: CourseTablet(),
       desktop: CourseDesktop(),
     );
   }

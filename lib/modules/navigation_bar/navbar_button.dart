@@ -1,3 +1,4 @@
+import 'package:adminbyneet/constants/app_color.dart';
 import 'package:flutter/material.dart';
 
 class NavbarButton extends StatelessWidget {
@@ -10,16 +11,9 @@ class NavbarButton extends StatelessWidget {
       width: 100,
       height: 40,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(14.0),
-          gradient: LinearGradient(
-            colors: [
-              Colors.blue,
-              Colors.blueAccent,
-              Colors.blue[200],
-            ],
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
-          )),
+        borderRadius: BorderRadius.circular(14.0),
+        color: Color(primaryColor),
+      ),
       child: RaisedButton(
         onPressed: onTap,
         color: Colors.transparent,

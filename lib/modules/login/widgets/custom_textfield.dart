@@ -1,3 +1,4 @@
+import 'package:adminbyneet/constants/app_color.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
@@ -20,6 +21,7 @@ class CustomTextField extends StatelessWidget {
         ),
         TextField(
           obscureText: isPassword,
+          cursorColor: Color(primaryColor),
           decoration: InputDecoration(
             hintText: hintText,
           ),

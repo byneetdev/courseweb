@@ -1,3 +1,4 @@
+import 'package:adminbyneet/constants/app_color.dart';
 import 'package:adminbyneet/constants/lang.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -103,15 +104,7 @@ class SearchHomeItem extends StatelessWidget {
                             height: 50,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(14.0),
-                                gradient: LinearGradient(
-                                  colors: [
-                                    Colors.blue,
-                                    Colors.blueAccent,
-                                    Colors.blue[200],
-                                  ],
-                                  begin: Alignment.centerLeft,
-                                  end: Alignment.centerRight,
-                                )),
+                                color: Color(primaryColor)),
                             child: RaisedButton(
                               onPressed: () {},
                               color: Colors.transparent,
@@ -165,15 +158,7 @@ class SearchHomeItem extends StatelessWidget {
                             height: 50,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(14.0),
-                                gradient: LinearGradient(
-                                  colors: [
-                                    Colors.blue,
-                                    Colors.blueAccent,
-                                    Colors.blue[200],
-                                  ],
-                                  begin: Alignment.centerLeft,
-                                  end: Alignment.centerRight,
-                                )),
+                                color: Color(primaryColor)),
                             child: RaisedButton(
                               onPressed: () {},
                               color: Colors.transparent,
@@ -203,7 +188,7 @@ class SearchHomeItem extends StatelessWidget {
   Widget buildCircle() {
     return CircleAvatar(
       radius: 5,
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: Color(primaryColor),
     );
   }
 }

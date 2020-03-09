@@ -23,20 +23,7 @@ class HomeDesktop extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Stack(
-                children: <Widget>[
-                  CustomCarousel(),
-                  // Container(
-                  //   width: double.infinity,
-                  //   height: 600,
-                  //   decoration: BoxDecoration(
-                  //       gradient: LinearGradient(colors: [
-                  //     Colors.black54,
-                  //     Colors.black54,
-                  //   ])),
-                  // ),
-                ],
-              ),
+              CustomCarousel(),
               SizedBox(height: 100),
               SearchHomeItem(),
               SizedBox(height: 70),
@@ -98,15 +85,15 @@ class HomeDesktop extends StatelessWidget {
                 SizedBox(width: 22),
                 NavBarItem(title: kTentang, onTap: null),
                 SizedBox(width: 15),
-                Container(
-                  width: 5,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    color: Colors.amber,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                ),
-                SizedBox(width: 15),
+                // Container(
+                //   width: 5,
+                //   height: 50,
+                //   decoration: BoxDecoration(
+                //     color: Colors.amber,
+                //     borderRadius: BorderRadius.circular(15),
+                //   ),
+                // ),
+                // SizedBox(width: 15),
                 NavBarItem(
                     title: kLogin,
                     onTap: () => Navigator.push(

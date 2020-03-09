@@ -73,18 +73,18 @@ class CourseDesktop extends StatelessWidget {
                 SizedBox(width: 22),
                 NavBarItem(title: kTentang, onTap: null),
                 SizedBox(width: 15),
-                Container(
-                  width: 5,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    color: Colors.amber,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                ),
-                SizedBox(width: 15),
+                // Container(
+                //   width: 5,
+                //   height: 50,
+                //   decoration: BoxDecoration(
+                //     color: Colors.amber,
+                //     borderRadius: BorderRadius.circular(15),
+                //   ),
+                // ),
+                // SizedBox(width: 15),
                 NavBarItem(title: kLogin, onTap: null),
                 SizedBox(width: 22),
-                NavbarButton(title: kDaftar),
+                NavbarButton(title: kDaftar, onTap: () {}),
               ],
             ),
           ],

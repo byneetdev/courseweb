@@ -1,3 +1,4 @@
+import 'package:adminbyneet/constants/app_color.dart';
 import 'package:adminbyneet/constants/lang.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -65,13 +66,10 @@ class SwiperItemOne extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 17),
-                      OutlineButton(
-                        borderSide: BorderSide(
-                          color: Colors.blueAccent,
-                          width: 6,
-                        ),
+                      RaisedButton(
+                        color: Color(primaryColor),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(3),
+                          borderRadius: BorderRadius.circular(13),
                         ),
                         onPressed: () {},
                         child: Padding(

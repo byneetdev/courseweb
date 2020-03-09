@@ -1,3 +1,4 @@
+import 'package:adminbyneet/constants/app_color.dart';
 import 'package:adminbyneet/modules/home/widgets/swiperItemOne.dart';
 import 'package:adminbyneet/modules/home/widgets/swiperItemTwo.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,7 @@ class CustomCarousel extends StatelessWidget {
       child: Swiper.children(
         pagination: SwiperControl(
           padding: EdgeInsets.symmetric(horizontal: 40),
-          color: Colors.white,
+          color: Color(primaryColor),
           iconNext: Icons.arrow_forward_ios,
           iconPrevious: Icons.arrow_back_ios,
           size: 45,
