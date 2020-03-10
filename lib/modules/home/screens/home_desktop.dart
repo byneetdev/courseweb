@@ -8,10 +8,12 @@ import 'package:adminbyneet/modules/home/widgets/popular_course_home_item.dart';
 import 'package:adminbyneet/modules/home/widgets/search_home_item.dart';
 import 'package:adminbyneet/modules/home/widgets/testimonial_home_item.dart';
 import 'package:adminbyneet/modules/login/screens/login_view.dart';
+import 'package:adminbyneet/modules/login/service/login_service.dart';
 import 'package:adminbyneet/modules/navigation_bar/navbar_button.dart';
 import 'package:adminbyneet/modules/navigation_bar/navbar_item.dart';
 import 'package:adminbyneet/modules/register/screens/register_view.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class HomeDesktop extends StatelessWidget {
   @override
@@ -56,6 +58,7 @@ class HomeDesktop extends StatelessWidget {
   }
 
   Widget appBarWidget(BuildContext context) {
+    // final userProv = Provider.of<LoginService>(context);
     return AppBar(
       backgroundColor: Colors.transparent,
       title: Padding(
@@ -107,21 +110,43 @@ class HomeDesktop extends StatelessWidget {
                   ),
                 ),
                 SizedBox(width: 15),
-                NavBarItem(
-                    title: kLogin,
-                    onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => LoginView(),
-                        ))),
-                SizedBox(width: 22),
-                NavbarButton(
-                  title: kDaftar,
-                  onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => RegisterView(),
-                      )),
+                Consumer<LoginService>(
+                  builder: (context, userProv, _) {
+                    if (userProv.status != Status.Authenticated) {
+                      return Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          NavBarItem(
+                              title: kLogin,
+                              onTap: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => LoginView(),
+                                  ))),
+                          SizedBox(width: 22),
+                          NavbarButton(
+                            title: kDaftar,
+                            onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => RegisterView(),
+                                )),
+                          ),
+                        ],
+                      );
+                    } else {
+                      return Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Text(userProv.account.name),
+                          RaisedButton(
+                            onPressed: () {},
+                            child: Icon(Icons.settings),
+                          )
+                        ],
+                      );
+                    }
+                  },
                 ),
               ],
             ),
