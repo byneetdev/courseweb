@@ -11,7 +11,7 @@ class CourseDetailView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
-      mobile: CourseDetailMobile(),
+      mobile: CourseDetailMobile(course: course),
       desktop: CourseDetailDesktop(course: course),
     );
   }

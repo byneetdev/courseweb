@@ -1,6 +1,7 @@
 import 'package:adminbyneet/constants/app_color.dart';
 import 'package:adminbyneet/constants/lang.dart';
 import 'package:adminbyneet/listItem/model/course.dart';
+import 'package:adminbyneet/modules/course/widgets/course_button_outline.dart';
 import 'package:adminbyneet/modules/course/widgets/curriculum_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -38,17 +39,44 @@ class CourseDetailWidget extends StatelessWidget {
               color: Color(primaryColor),
             ),
           ),
+          SizedBox(height: 15),
+          RichText(
+              text: TextSpan(children: [
+            TextSpan(
+              text: "Dibuat oleh : ",
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.black,
+                // fontWeight: FontWeight.bold,
+                // color: Color(primaryColor),
+              ),
+            ),
+            TextSpan(
+              text: course.creator,
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Color(primaryColor),
+              ),
+            ),
+          ])),
           SizedBox(height: 25),
           Row(
             children: <Widget>[
-              buildButton(Icons.favorite_border, xDaftarkeWishlist),
+              CourseButtonOutline(
+                title: xDaftarkeWishlist,
+                icon: Icons.favorite_border,
+                onTap: () {},
+              ),
               SizedBox(width: 20),
-              buildButton(Icons.share, xBagikan),
+              CourseButtonOutline(
+                title: xBagikan,
+                icon: Icons.share,
+                onTap: () {},
+              ),
             ],
           ),
-          SizedBox(
-            height: 30,
-          ),
+          SizedBox(height: 30),
           Text(
             xKurikulum,
             style: TextStyle(
@@ -57,9 +85,7 @@ class CourseDetailWidget extends StatelessWidget {
               color: Colors.black,
             ),
           ),
-          SizedBox(
-            height: 30,
-          ),
+          SizedBox(height: 30),
           Wrap(
             children: <Widget>[CurriculumWidget(theory: course.theories)],
           ),
