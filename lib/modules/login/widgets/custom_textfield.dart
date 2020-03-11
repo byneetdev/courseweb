@@ -11,12 +11,14 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
       children: <Widget>[
         Text(
           title,
           style: TextStyle(
             fontSize: 13,
             color: Colors.black54,
+            // height: 0.3,
           ),
         ),
         TextField(

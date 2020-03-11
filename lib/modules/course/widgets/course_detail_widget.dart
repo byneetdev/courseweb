@@ -70,7 +70,7 @@ class CourseDetailWidget extends StatelessWidget {
 
   Widget buildButton(IconData icon, String title) {
     return OutlineButton(
-      borderSide: BorderSide(color: Colors.blue),
+      borderSide: BorderSide(color: Color(primaryColor)),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
       onPressed: () {},
       child: Padding(
